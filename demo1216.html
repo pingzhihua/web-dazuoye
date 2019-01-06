@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>大作业1</title>
+	<style type="text/css">
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		a{
+			text-decoration:none;
+		}
+		ul,li{
+			list-style: none;
+		}
+		.whole{
+			width:1350px;
+			height:1064px;
+			background-color: white;
+		}
+		.up{
+			height:166px;
+			width:1350px;
+			background-color: white;
+		}
+		.upMiddle{
+			height:166px;
+			width:1180px;
+			margin:0 auto;
+			background-color: white;
+		}
+		.top{
+			width:1180px;
+			height:27px;
+			line-height:27px;
+		}
+		.down{
+			height:898px;
+			width:1350px;
+			background-color: #f8f7f6;
+		}
+		.downMiddle{
+			margin:0 auto;
+			width:1180px;
+			height:898px;
+		}
+		.left{
+			color:#74736d;
+			font-size:12px;
+			float:left;
+		}
+		.right{
+			float:right;
+			width:737px;
+			font-size:12px;
+			color:#c8c69e;
+		}
+		.top-QQ{
+			margin-right:14px;
+		}
+		.top-weixin{
+			margin-right:14px;
+			line-height:27px;
+		}
+		.top-weibo{
+			margin-right:14px;
+			line-height:27px;
+		}
+		.xiaoXi{
+			width:24px;
+			padding-left:18px;
+			background:url(img/common_min.png) -4px -113px no-repeat;
+			padding-right: 14px;
+			color:#74736d;
+		}
+		.dingDan{
+			background:url(img/dingdan.jpg) no-repeat 0 2px;
+			padding-left:17px;
+			padding-right: 14px;
+			color:#74736d;
+		}
+		.inputk{
+			height:40px;
+			width:483px;
+			margin-left:108px;
+			margin-top: 22px;
+			float:left;
+			font-size: 14px;
+			line-height: 36px;
+			color:#74736d;
+		}
+		.sou{
+			height:36px;
+			width:83px;
+			float:left;
+			margin-top: 22px;
+			border:2px solid #fe6c00;
+			background-color:#fe6c00;
+			color:white;
+			text-align: center;
+			line-height: 36px;
+		}
+		.wenti{
+			height:36px;
+			width:85px;
+			border:1px solid #e6e5e2;
+			float:right;
+			margin-top: 22px;
+		}
+		.xifahupin{
+			margin-left: 248px;
+			width:543px;
+		}
+		.riben{
+			float:left;
+			font-size: 11px;
+			color:#74736d;
+			margin-left:10px;
+			margin-top:10px;
+		}
+		.bottom{
+			width:1180px;
+			height:39px;
+			margin:0 auto;
+		}
+		.shangpin{
+			height:39px;
+			width: 171px;
+			background-color: #ff4d04;
+			font-size: 16px;
+			color:white;
+			line-height: 39px;
+			text-align: center;
+			float:left;
+		}
+		.bang5zhuan{
+			height:39px;
+			width:753px;
+			font-size: 16px;
+			float:left;
+		}
+		.banghanpin{
+			padding-left: 45px;
+			line-height: 39px;
+			color: black;
+		}
+		.downMiddle{
+			width:1180px;
+			height:548px;
+		}
+		.leftleft{
+			width:171px;
+			height:548px;
+			float:left;
+		}
+		.downtop{
+			width:171px;
+			height:404px;
+		}
+		.downleft{
+			width:25px;
+			height:404px;
+			background-color: black;
+			font-size: 16px;
+			color:red;
+			text-align: center;
+			padding-top: 15px;
+			float: left;
+		}
+		.downright{
+			width:146px;
+			height:418px;
+			float: left;
+			background-color: white;
+		}
+		.fenlei{
+			font-size: 10px;
+			padding-left: 4px;
+		}
+		.downbottom{
+			width:171px;
+			height:128px;
+			background-color: white;
+		}
+		.mid{
+			height:548px;
+			width:800px;
+			float: left;
+		}
+		.rightright{
+			height:548px;
+			width:209px;
+			float: right;
+			background-color: white;
+		}
+		.righttop{
+			height:43px;
+			width:209px;
+		}
+		.rightmid{
+			height:317px;
+			width:209px;
+			overflow: hidden;
+		}
+		.gonggao{
+			font-size: 12px;
+			height:30px;
+			text-indent: 15px;
+			overflow: hidden;
+			display: block;
+		}
+		.rightbottom{
+			height:183px;
+			width:209px;
+		}
+		.bestbottom{
+			height:350px;
+			width:1180px;
+			margin:0 auto;
+		}
+		.bestbottomTop{
+			height:182px;
+			width:1180px;
+		}
+		.bestbottomTopleft{
+			height:182px;
+			width:171px;
+			float:left;
+		}
+		.bestbottomTopright{
+			width:1009px;
+			height:182px;
+			float:left;
+		}
+		.bestbottomDown{
+			height:168px;
+			width:1180px;
+		}
+		.box{
+			width: 800px;
+			height: 361px;
+			position: relative;
+			overflow: hidden;
+		}
+		.slider{
+			height:361px;
+			width: 6400px;
+			position: absolute;
+			left: -800px;
+		}
+		.slide{
+			width: 800px;
+			float: left;
+		}
+		.nav{
+			position: absolute;
+			left: 300px;
+			bottom: 20px;
+		}
+		.nav>li{
+			float: left;
+			width: 20px;
+			height: 20px;
+			background: #ccc;
+			cursor: pointer;
+			margin: 0 10px;
+			border-radius: 50%;
+		}
+		.nav .active{
+			background: red;
+		}
+		#spanl{
+			height:60px;
+			width:60px;
+			cursor: pointer;
+			top: 155px;
+			position: absolute;
+			left: 20px;
+		}
+		#spanr{
+			height:60px;
+			width:60px;
+			cursor: pointer;
+			top: 155px;
+			position: absolute;
+			right: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="whole">
+		<div class="up">
+				<div id="cover" style="background-color: white;width:1350px;z-index: 100;">
+					<div class="top" style="width:1180px;margin:0 auto;">
+						<div class="left"><a href="" style="color:#74736d;">帮5买，享帮帮</a></div>
+						<div class="right">
+							<a href="" class="top-QQ"><img src="img/images/QQ_02.png"></a>
+							<a href="" class="top-weixin denglu"><img src="img/images/weixin_04.png"></a>
+							<a href="" class="top-weibo denglu"><img src="img/images/weixin_06.png"></a>
+							<a href="login.html" style="margin-right:14px;color:#74736d;">登录</a>
+							<a href="regisiter.html" style="margin-right:14px;color:#74736d;">注册</a>
+							<a href="" class="xiaoXi">消息</a>
+							<a href="" class="dingDan">我的订单</a>
+							<a href="" style="margin-right:14px;color:#74736d;" >我的收藏</a>
+							<a href="" style="margin-right:14px;color:#74736d;">帮钻兑换</a>
+							<img src="img/phone.png" >
+							<a href="" style="margin-right:14px;color:#74736d;" >手机版</a>
+							<a href="" style="margin-right:14px;color:#74736d;" >帮5淘</a>
+							<a href="" style="margin-right:14px;color:#74736d;" >客户服务</a>
+							<img src="img/gouwuche.jpg" >
+							<a href="" class="shoppingCar" style="color:#74736d;">购物车 </a>
+							<a href=""style ="color:orange;margin-left:13px;font-size: 15px;"><b>0</b></a>
+						</div>
+					</div>
+					<div class="middle" style="width:1180px;margin:0 auto;height:100px;">
+						<div style="float: left;"><img src="img/logo_03.jpg" style="margin-top:10px;"></div>
+						<div>
+							<div class="inputk"><input type="text" placeholder="输入商品网址或关键词，直通全网，快速帮5购！" style="height:36px;width:481px;border:2px solid #fe6c00"></div>
+							<div class="sou" >搜全网</div>
+						</div>
+						<div class="wenti" style="background-color: #fe6c00;color:white;line-height:36px;font-size:13px;text-align: center;"><img src="img/wenhao.jpg">常见问题</div>
+						<div class="wenti" style="font-size:11px;color:#74736d;"><img src="img/images/xinfeng_05_02.jpg" style="margin-left:27px;margin-top: 6px;"><br>mc@b5m.com</div>
+						<div class="wenti" style="font-size:10px;color:#74736d;"><img src="img/images/weibo_05_02.jpg"style="margin-left:27px;margin-top: 2px;"><br>400-085-0505</div>
+						<div class="xifahupin">
+								<a href="" class="riben" style="color:red;">洗发护品</a>
+								<img src="img/images/duanxian_01.jpg" style="float:left;margin-left:10px;margin-top:10px;">
+								<a href="" class="riben" style="color:red;">日本纸尿裤</a>
+								<img src="img/images/duanxian_01.jpg" style="float:left;margin-left:10px;margin-top:10px;">
+								<a href="" class="riben">身体乳</a>
+								<img src="img/images/duanxian_01.jpg" style="float:left;margin-left:10px;margin-top:10px;">
+								<a href="" class="riben" style="color:#c0a9d6;">iPhone 6s</a>
+								<img src="img/images/duanxian_01.jpg" style="float:left;margin-left:10px;margin-top:10px;">
+								<a href="" class="riben" style="color:#c0a9d6;">iPad Airs</a>
+								<img src="img/images/duanxian_01.jpg" style="float:left;margin-left:10px;margin-top:10px;">
+								<a href="" class="riben">牛仔裤</a>
+								<img src="img/images/duanxian_01.jpg" style="float:left;margin-left:10px;margin-top:10px;">
+								<a href="" class="riben">奶粉</a>
+								<img src="img/images/duanxian_01.jpg" style="float:left;margin-left:10px;margin-top:10px;">
+								<a href="" class="riben">防晒霜</a>
+								<img src="img/images/duanxian_01.jpg" style="float:left;margin-left:10px;margin-top:10px;">
+								<a href="" class="riben">伞</a>
+						</div>
+					</div>
+				</div>
+				<div class="bottom">
+					<div class="shangpin">全部商品分类</div>
+					<div class="bang5zhuan">
+						<a class="banghanpin" href="">帮5赚</a>
+						<a class="banghanpin" href="">帮韩品</a>
+						<a class="banghanpin" href="">超划算</a>
+						<a class="banghanpin" href="">品牌货栈</a>
+						<a class="banghanpin" href="">韩国馆</a>
+						<a class="banghanpin" href="">帮社区</a>
+						<a class="banghanpin" href="">1元兑奖</a>
+						<img src="img/hot.gif" style="padding-left: 0;margin-bottom: 9px;">
+					</div>
+				</div>
+		</div>
+		<div style="border:solid 0.5px #ff4d04"></div>
+		<div class="down">
+			<div class="downMiddle">
+				<div class="leftleft">
+					<div class="downtop">
+						<div class="downleft">
+							<p>当前搜索电商</p>
+							<p>全网</p>
+						</div>
+						<div class="downright">
+							<div style="margin-top:11px;margin-left:11px;">
+								<a href="" class="fenlei" style="color:black;">手机</a>
+								<a href="" class="fenlei" style="color:black;">数码</a>
+								<a href="" class="fenlei" style="color:black;">影音</a>
+								<a href="" class="fenlei" style="color:black;">配件</a>
+							</div>
+							<div style="margin-top:11px;margin-left:11px;">
+								<a href="" class="fenlei" style="color:black;">电脑</a>
+								<a href="" class="fenlei" style="color:black;">网络</a>
+								<a href="" class="fenlei" style="color:black;">办公</a>
+								<a href="" class="fenlei" style="color:black;">打印</a>
+							</div>
+							<div style="margin-top:11px;margin-left:11px;">
+								<a href="" class="fenlei" style="color:black;">家电</a>
+								<a href="" class="fenlei" style="color:black;">厨卫</a>
+								<a href="" class="fenlei" style="color:black;">生活</a>
+								<a href="" class="fenlei" style="color:black;">个户</a>
+							</div>
+							<div style="margin-top:11px;margin-left:11px;">
+								<a href="" class="fenlei" style="color:black;">园艺</a>
+								<a href="" class="fenlei" style="color:black;">家具</a>
+								<a href="" class="fenlei" style="color:black;">家纺</a>
+								<a href="" class="fenlei" style="color:black;">家饰</a>
+							</div>
+							<div style="margin-top:11px;margin-left:11px;">
+								<a href="" class="fenlei" style="color:black;">彩妆</a>
+								<a href="" class="fenlei" style="color:black;">面部</a>
+								<a href="" class="fenlei" style="color:black;">身体</a>
+								<a href="" class="fenlei" style="color:black;">香水</a>
+							</div>
+							<div style="margin-top:11px;margin-left:11px;">
+								<a href="" class="fenlei" style="color:black;">男装</a>
+								<a href="" class="fenlei" style="color:black;">女装</a>
+								<a href="" class="fenlei" style="color:black;">内衣</a>
+								<a href="" class="fenlei" style="color:black;">其他</a>
+							</div>
+							<div style="margin-top:11px;margin-left:11px;">
+								<a href="" class="fenlei" style="color:black;">女包</a>
+								<a href="" class="fenlei" style="color:black;">男包</a>
+								<a href="" class="fenlei" style="color:black;">女鞋</a>
+								<a href="" class="fenlei" style="color:black;">男鞋</a>
+							</div>
+							<div style="margin-top:11px;margin-left:11px;">
+								<a href="" class="fenlei" style="color:black;">运动</a>
+								<a href="" class="fenlei" style="color:black;">户外</a>
+								<a href="" class="fenlei" style="color:black;">装备</a>
+								<a href="" class="fenlei" style="color:black;">服饰</a>
+							</div>
+							<div style="margin-top:11px;margin-left:11px;">
+								<a href="" class="fenlei" style="color:black;">儿童</a>
+								<a href="" class="fenlei" style="color:black;">婴儿</a>
+								<a href="" class="fenlei" style="color:black;">食品</a>
+								<a href="" class="fenlei" style="color:black;">玩具</a>
+							</div>
+							<div style="margin-top:11px;margin-left:11px;">
+								<a href="" class="fenlei" style="color:black;">乐器</a>
+								<a href="" class="fenlei" style="color:black;">家宠</a>
+								<a href="" class="fenlei" style="color:black;">收藏</a>
+								<a href="" class="fenlei" style="color:black;">鲜花</a>
+							</div>
+							<div style="margin-top:11px;margin-left:11px;">
+								<a href="" class="fenlei" style="color:black;">保健</a>
+								<a href="" class="fenlei" style="color:black;">理疗</a>
+								<a href="" class="fenlei" style="color:black;">药品</a>
+								<a href="" class="fenlei" style="color:black;">眼镜</a>
+							</div>
+							<div style="margin-top:11px;margin-left:11px;">
+								<a href="" class="fenlei" style="color:black;">果蔬</a>
+								<a href="" class="fenlei" style="color:black;">补品</a>
+								<a href="" class="fenlei" style="color:black;">粮油</a>
+								<a href="" class="fenlei" style="color:black;">特产</a>
+							</div>
+							<div style="margin-top:11px;margin-left:11px;">
+								<a href="" class="fenlei" style="color:black;">文艺</a>
+								<a href="" class="fenlei" style="color:black;">生活</a>
+								<a href="" class="fenlei" style="color:black;">科技</a>
+								<a href="" class="fenlei" style="color:black;">教育</a>
+							</div>
+						</div>
+					</div>
+					<div style="border:solid 1px #ff4d04;margin-top: 14px;"></div>
+					<div class="downbottom">
+						<div style="height:41px;width:171px;">
+							<img src="img/dd_03.jpg" style="margin-top:16px;margin-left:7px;float: left;">
+							<div style="font-size: 13px;color:#be7d37;padding-left:10px;float: left;padding-top: 16px;">什么是帮5购</div>
+						</div>
+						<div style="height:41px;width:171px;">
+							<img src="img/dd_06.jpg" style="margin-top:16px;margin-left:7px;float: left;">
+							<div style="font-size: 13px;color:#be7d37;padding-top: 16px;float: left;padding-left:10px">帮5购提供什么服务</div>
+						</div>
+						<div>
+							<img src="img/dd_08.jpg" style="margin-top:16px;margin-left:7px;float: left;">
+							<div style="font-size: 13px;color:#be7d37;padding-top: 16px;float: left;padding-left:10px">如何开通帮5购服务</div>
+						</div>
+					</div>
+				</div>
+				<div class="mid">
+					<div class="box" id="box" >
+						<div id="slider" class="slider">
+							<div class="slide"><img src="img/bann6.png"></div>
+							<div class="slide"><img src="img/bann1.jpeg"></div>
+							<div class="slide"><img src="img/bann2.jpeg"></div>
+							<div class="slide"><img src="img/bann3.jpeg"></div>
+							<div class="slide"><img src="img/bann4.jpeg"></div>
+							<div class="slide"><img src="img/bann5.jpeg"></div>
+							<div class="slide"><img src="img/bann6.png"></div>
+							<div class="slide"><img src="img/bann1.jpeg"></div>
+						</div>
+						<div id="spanl"><img src="img/images/btnl_01.png"></div>
+						<div id="spanr"><img src="img/images/btnr_02.png"></div>
+						<ul class="nav" id="nav">
+							<li class="active" style="text-align: center;">1</li>
+							<li style="text-align: center;">2</li>
+							<li style="text-align: center;">3</li>
+							<li style="text-align: center;">4</li>
+							<li style="text-align: center;">5</li>
+							<li style="text-align: center;">6</li>
+						</ul>
+					</div>
+					<div style="border:solid 1px #ff4d04;"></div>
+					<div style="height:183px;width:800px;">
+						<img src="img/1(1).jpg" style="float: left;">
+						<img src="img/2.jpg" style="float: left;">
+						<img src="img/3(1).png" style="float: left;">
+						<a href="demo1226.html"><img src="img/qqq.png" style="float: left;"></a>
+					</div>
+				</div>
+				<div class="rightright">
+					<div class="righttop">
+						<img src="img/ico-notice.png" style="margin-top:17px;margin-left:22px;float: left;">
+						<div style="font-size: 15px;color:#ff4d04;float: left;margin-left:10px;margin-top:15px;"><p><b>帮帮快询</b></p></div>
+						<img src="img/jiantou.jpg" style="margin-top:20px;float: right;margin-right:24px;">
+					</div>
+					<div style="border:solid 0.5px #ebeae7;"></div>
+					<div class="rightmid" id="scrollBox" >
+						<ul id="con1" style="overflow: hidden;">
+							<li class="gonggao"><a href="" style="color:#ff4d04;">[公告]  帮购及VIP服务调整1</a></li>
+							<li class="gonggao"><a href="" style="color:#ff4d04;">[公告]  帮购及VIP服务调整2</a></li>
+							<li class="gonggao"><a href="" style="color:#ff4d04;">[公告]  帮购及VIP服务调整3</a></li>
+							<li class="gonggao"><a href="" style="color:#ff4d04;">[公告]  帮购及VIP服务调整4</a></li>
+							<li class="gonggao"><a href="" style="color:#ff4d04;">[公告]  帮购及VIP服务调整5</a></li>
+							<li class="gonggao"><a href="" style="color:#ff4d04;">[公告]  帮购及VIP服务调整6</a></li>
+							<li class="gonggao"><a href="" style="color:#ff4d04;">[公告]  帮购及VIP服务调整7</a></li>
+							<li class="gonggao"><a href="" style="color:#ff4d04;">[公告]  帮购及VIP服务调整8</a></li>
+							<li class="gonggao"><a href="" style="color:#ff4d04;">[公告]  帮购及VIP服务调整9</a></li>
+							<li class="gonggao"><a href="" style="color:#ff4d04;">[公告]  帮购及VIP服务调整10</a></li>
+							<li class="gonggao"><a href="" style="color:#ff4d04;">[公告]  帮购及VIP服务调整11</a></li>
+							<li class="gonggao"><a href="" style="color:#ff4d04;">[公告]  帮购及VIP服务调整12</a></li>
+							<li class="gonggao"><a href="" style="color:#ff4d04;">[公告]  帮购及VIP服务调整13</a></li>
+						</ul>
+						<ul id="con2" style="overflow: hidden;"></ul>
+					</div>
+					<div style="border:solid 0.5px #ebeae7;"></div>
+					<div class="rightbottom">
+						<img src="img/phone.png" style="margin-top:7px;margin-left:20px;float:left;">
+						<div style="font-size: 12px;margin-left:18px;padding-top:8px;float: left;">话费充值</div>
+						<div style="font-size: 11px;color:#ff4d04;padding-top:8px;margin-left:9px;float:left;">(可使用超级帮钻)</div>
+						<input type="text" name="" placeholder="请输入手机号" style="margin-top:12px;margin-left:20px;">
+						<select id="huafei" style="margin-top:8px;margin-left:20px;float:left;">
+							<option value="￥30" >30</option>
+							<option value="￥50" >50</option>
+							<option value="￥100">100</option>
+							<option value="￥200">200</option>
+						</select>
+						<div id="money" style="float:left;margin-top:5px;height:19px;width:55px;margin-left:8px;font-size: 14px;color:#ff4d04;"></div>
+						<div style="background-color:#ff4d04; margin-left:20px;margin-top:34px;color:white;text-align: center;height:24px;width:180px;border-radius: 4px;">充值</div>
+					</div>
+				</div>
+			</div>
+			<div class="bestbottom">
+				<div class="bestbottomTop">
+					<div class="bestbottomTopleft">
+						<img src="img/loginB.jpg" >
+					</div>
+					<div class="bestbottomTopright">
+						<div style="height:117px;width:70px;margin-top:30px;margin-left:60px;float:left;">
+							<p style="font-size: 14px;">购物指南</p>
+							<li style="font-size: 10px;margin-top:8px; color:#666560;">如何下单</li>
+							<li style="font-size: 10px;margin-top:8px;color:#666560; ">帮5购流程</li>
+							<li style="font-size: 10px;margin-top:8px;color:#666560; ">订单查询</li>
+							<li style="font-size: 10px;margin-top:8px; color:#666560;">物流配送</li>
+							
+						</div>
+						<div style="height:117px;width:70px;margin-top:30px;margin-left:60px;float:left;">
+							<p style="font-size: 14px;">支付相关</p>
+							<li style="font-size: 10px;margin-top:8px; color:#666560;">支付方式</li>
+							<li style="font-size: 10px;margin-top:8px;color:#666560; ">安全设置</li>
+							<li style="font-size: 10px;margin-top:8px;color:#666560; ">账户信息</li>
+						</div>
+						<div style="height:117px;width:70px;margin-top:30px;margin-left:60px;float:left;">
+							<p style="font-size: 14px;">售后服务</p>
+							<li style="font-size: 10px;margin-top:8px; color:#666560;">取消订单</li>
+							<li style="font-size: 10px;margin-top:8px;color:#666560; ">申请售后</li>
+							<li style="font-size: 10px;margin-top:8px;color:#666560; ">退货流程</li>
+							<li style="font-size: 10px;margin-top:8px;color:#666560; ">退款相关</li>
+						</div>
+						<div style="height:117px;width:70px;margin-top:30px;margin-left:60px;float:left;">
+							<p style="font-size: 14px;">VIP服务</p>
+							<li style="font-size: 10px;margin-top:8px; color:#666560;">VIP优惠</li>
+							<li style="font-size: 10px;margin-top:8px;color:#666560; ">如何成为VIP</li>
+							<li style="font-size: 10px;margin-top:8px;color:#666560; ">超级帮钻</li>
+						</div>
+						<div style="height:117px;width:70px;margin-top:30px;margin-left:60px;float:left;">
+							<p style="font-size: 14px;">帮韩品</p>
+							<li style="font-size: 10px;margin-top:8px; color:#666560;">韩国正品</li>
+							<li style="font-size: 10px;margin-top:8px;color:#666560; ">闪电发货</li>
+							<li style="font-size: 10px;margin-top:8px;color:#666560; ">帮韩品售后</li>
+						</div>
+						<div style="height:117px;width:70px;margin-top:30px;margin-left:60px;float:left;">
+							<p style="font-size: 14px;">更多</p>
+							<li style="font-size: 10px;margin-top:8px; color:#666560;">手机APP</li>
+							<li style="font-size: 10px;margin-top:8px;color:#666560; ">帮5采APP</li>
+							<li style="font-size: 10px;margin-top:8px;color:#666560; ">帮5淘插件</li>
+							<li style="font-size: 10px;margin-top:8px;color:#666560; ">其他</li>
+						</div>
+						<img src="img/erweima.jpg" style="margin-left:60px;margin-top:30px;">
+						<div style="border:solid 0.5px #ebeae7;"></div>
+					</div>
+				</div>
+				<div class="bestbottomDown">
+					<div style="height:20px;width:668px;margin-left:277px;margin-top:5px;">
+						<li style="font-size: 10px;color:#666560;margin-right:12px;float: left;">关于帮5买</li>
+						<img src="img/images/duanxian_01.jpg" style="margin-right:12px;float: left;">
+						<li style="font-size: 10px;color:#666560;margin-right:12px;float: left;">联系我们</li>
+						<img src="img/images/duanxian_01.jpg" style="margin-right:12px;float: left;">
+						<li style="font-size: 10px;color:#666560;margin-right:12px;float: left;">合作商家</li>
+						<img src="img/images/duanxian_01.jpg" style="margin-right:12px;float: left;">
+						<li style="font-size: 10px;color:#666560;margin-right:12px;float: left;">友情链接</li>
+						<img src="img/images/duanxian_01.jpg" style="margin-right:12px;float: left;">
+						<li style="font-size: 10px;color:#666560;margin-right:12px;float: left;">加入我们</li>
+						<img src="img/images/duanxian_01.jpg" style="margin-right:12px;float: left;">
+						<li style="font-size: 10px;color:#666560;margin-right:12px;float: left;">移动应用</li>
+						<img src="img/images/duanxian_01.jpg" style="margin-right:12px;float: left;">
+						<li style="font-size: 10px;color:#666560;margin-right:12px;float: left;">热门</li>
+						<img src="img/images/duanxian_01.jpg" style="margin-right:12px;float: left;">
+						<li style="font-size: 10px;color:#666560;margin-right:12px;float: left;">广告联盟</li>
+						<img src="img/images/duanxian_01.jpg" style="margin-right:12px;float: left;">
+						<li style="font-size: 10px;color:#666560;margin-right:12px;float: left;">使用条款</li>
+						<img src="img/images/duanxian_01.jpg" style="margin-right:12px;float: left;">
+					</div>
+					<div style="font-size: 10px;color:#666560;margin-left:355px;margin-top:5px;">Copyright @ 2011-2015 B5M.COM.All rights reserved.Powered by B5Msoft CO,Ltd.</div>
+					<div style="font-size: 10px;color:#666560;margin-left:50px;margin-top:8px;">增值电信业务经营许可证：沪B2-20130065号 | 中华人民共和国互联网药品信息服务资格证书（沪）—非经营性—2012—0034护卫（中医）网审【2015】10032沪ICP备11034776号—3 | 食品流通许可证：</div>
+					<div style="font-size: 10px;color:#666560;text-align: center;margin-top:8px;">SP3101151410301755</div>
+					<div style="height:50px;width:900px;margin:0 auto;">
+						<img src="img/bo1.gif" style="float: left;margin-right:3px;margin-top:25px;">
+						<img src="img/bo2.png" style="float: left;margin-right:3px;margin-top:31px;">
+						<img src="img/bo3.gif" style="float: left;margin-right:3px;margin-top:31px;">
+						<img src="img/bo4.png" style="float: left;margin-right:3px;margin-top:26px;">
+						<img src="img/bo5.png" style="float: left;margin-right:3px;margin-top:30px;">
+						<img src="img/bo6.png" style="float: left;margin-right:3px;margin-top:30px;">
+						<img src="img/bo6.png" style="float: left;margin-right:3px;margin-top:30px;">
+						<img src="img/bo7.png" style="float: left;margin-right:3px;margin-top:20px;">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="xiaobang" style="position:fixed;right:0;top:40px;height:105px;width:44px;overflow: hidden;">
+		<div style="height:60px;"><img src="img/consult-s.png"></div>
+		<div><img src="img/xiaobang.png"></div>
+	</div>
+	<div id="youhui" style="position:fixed;right:0;top:150px;height:140px;width:123px;overflow: hidden;width:44px; ">
+		<div style="height:140px;width:60px;float: left;"><img src="img/youhui.png"></div>
+		<div style="height:140px;width:63px;background-color:rgb(253,154,110);float: left;">
+			<div style="float: left;">
+				<div style="margin-top:40px;"><span style="font-size: 12px;color: black;"><b>未登录</b></span></div>
+				<div style="margin-top: 12px;border:1px solid white;height:23px;width:36px;text-align: center"><span style="font-size: 12px;color:white;line-height: 23px;">登录</span></div>
+			</div>
+		</div>
+	</div>
+	<div id="shouji" style="height:140px;width:123px;background-color: rgb(253,154,110);position:fixed;right:0;top:295px;width:44px;overflow: hidden;">
+			<div style="height:50px;"><img src="img/app.png"></div>
+			<div id="bigerweima" style="height:90px;margin-left: 10px;margin-top: 50px;"><img src="img/serwei.png"></div>
+	</div>
+	<div id="gouwuche" style="position:fixed;right:0;top:440px;height:140px;width:44px;overflow: hidden;"><img src="img/cart.png"></div>
+	<script type="text/javascript">
+		//顶部悬浮
+		window.onload = function(){
+		var cover = document.getElementById('cover');
+		window.onscroll = function(){
+			var st = document.documentElement.scrollTop || document.body.scrollTop;
+			if(st>180){
+				cover.style.position = "fixed";
+			}else{
+				cover.style.position = "static";
+		  	}
+	   	}
+    	}
+		//轮播图
+		var box = document.getElementById('box');
+		var slider = document.getElementById('slider');
+		var left = document.getElementById('spanl');
+		var right = document.getElementById('spanr');
+		var oNavlist = document.getElementById('nav').children;
+		var index = 1; //打开页面生效的图片的下标为1
+		var timer;
+		var isMoving = false;
+		box.onmouseover = function () {
+			animate(left, {
+				opacity: 0.6
+			})
+			animate(right, {
+				opacity: 0.6
+			})
+			clearInterval(timer); //图片停止滚动
+		}
+		box.onmouseout = function () {
+			animate(left, {
+				opacity: 0
+			})
+			animate(right, {
+				opacity: 0
+			})
+			timer = setInterval(next, 3000); //图片开始接着滚动
+		}
+		right.onclick = next;
+		left.onclick = prev;
+		function next() {
+			if (isMoving) {
+				return;
+			}
+			isMoving = true;
+			index++;
+			navmove();
+			animate(slider, {
+				left: -800 * index
+			}, function () {
+				if (index == 7) {
+					slider.style.left = '-800px';
+					index = 1;
+				}
+				isMoving = false;
+			});
+		}
+		function prev() {
+			if (isMoving) {
+				return;
+			}
+			isMoving = true;
+			index--;
+			navmove();
+			animate(slider, {
+				left: -800 * index
+			}, function () {
+				if (index == 0) {
+					slider.style.left = '-5600px';
+					index = 7;
+				}
+				isMoving = false;
+			});
+		}
+		//按钮点击切换事件
+		for (var i = 0; i < oNavlist.length; i++) {
+			oNavlist[i].index = i;
+			oNavlist[i].onclick = function () {
+				index = this.index + 1;
+				navmove();
+				animate(slider, {
+					left: -800 * index
+				});
+			}
+
+		}
+		//图片切换时按钮样式跟着切换
+		function navmove() {
+			for (var i = 0; i < oNavlist.length; i++) {
+				oNavlist[i].className = "";
+			}
+			if (index > 6) {
+				oNavlist[0].className = "active";
+			} else if (index <= 0) {
+				oNavlist[5].className = "active";
+			} else {
+				oNavlist[index - 1].className = "active";
+			}
+		}
+		//页面打开时自动滚动切换
+		timer = setInterval(next, 3000);
+		function getStyle(obj, attr) { //返回值带有单位px
+	  	if (obj.currentStyle) {
+	  		return obj.currentStyle[attr];
+	  	} else {
+	  		return getComputedStyle(obj, null)[attr];
+	  		}
+	  	}
+	  	function animate(obj, json, callback) {
+	  	clearInterval(obj.timer);
+	  	obj.timer = setInterval(function () {
+	  		var flag = true;
+	  		for (var attr in json) {
+	  			(function (attr) {
+	  				if (attr == "opacity") {
+	  					var now = parseInt(getStyle(obj, attr) * 100);
+	  					var dest = json[attr] * 100;
+	  				} else {
+	  					var now = parseInt(getStyle(obj, attr));
+	  					var dest = json[attr];
+	  				}
+	  				var speed = (dest - now) / 6;
+	  				speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+	  				if (now != dest) {
+	  					flag = false;
+	  					if (attr == "opacity") {
+	  						obj.style[attr] = (now + speed) / 100;
+	  					} else {
+	  						obj.style[attr] = now + speed + "px";
+	  					}
+	  				}
+	  			})(attr);
+	  		}
+	  		if (flag) {
+	  			clearInterval(obj.timer);
+	  			callback && callback(); //如果回调函数存在，就调用回调函数
+	  			}
+	  		}, 30);
+	  	}
+	  	//话费显示
+	  	var huafei = document.getElementById("huafei");
+	  	var money = document.getElementById("money");
+	  	huafei.onchange = function(){
+	  		money.innerHTML = this.value;
+	  	}
+	  	//文字滑动
+		var area = document.getElementById('scrollBox');
+		var con1 = document.getElementById('con1');
+		var con2 = document.getElementById('con2');
+		var speed = 30;
+		area.scrollTop = 0;
+		con2.innerHTML = con1.innerHTML;
+		function scrollUp(){
+			if(area.scrollTop >= con1.scrollHeight) {
+				area.scrollTop = 0;
+			}else{
+				area.scrollTop ++; //向上滚动
+			} 
+		}
+		var myScroll = setInterval("scrollUp()",speed);
+		area.onmouseover = function(){
+			clearInterval(myScroll);
+		}
+		area.onmouseout = function(){
+			myScroll = setInterval("scrollUp()",speed);
+		}
+		//鼠标事件
+		var xiaobang = document.getElementById("xiaobang");
+		xiaobang.onmouseover = function(){
+			xiaobang.style.overflow = null;
+			xiaobang.style.width = "123px";
+		}
+		xiaobang.onmouseout = function(){
+			xiaobang.style.overflow = "hidden";
+			xiaobang.style.width = "44px";
+		}
+		var youhui = document.getElementById("youhui");
+		youhui.onmouseover = function(){
+			youhui.style.overflow = null;
+			youhui.style.width = "123px";
+		}
+		youhui.onmouseout = function(){
+			youhui.style.overflow = "hidden";
+			youhui.style.width = "44px";
+		}
+		var shouji = document.getElementById("shouji");
+		var bigerweima = document.getElementById("bigerweima");
+		shouji.onmouseover = function(){
+			shouji.style.overflow = null;
+			shouji.style.width = "123px";
+			bigerweima.firstElementChild.src = "img/erwei.png";
+			bigerweima.style.marginTop = "0";
+		}
+		shouji.onmouseout = function(){
+			shouji.style.overflow = "hidden";
+			shouji.style.width = "44px";
+			bigerweima.firstElementChild.src = "img/serwei.png";
+			bigerweima.style.marginTop = "50px";
+		}
+		var gouwuche = document.getElementById("gouwuche");
+		gouwuche.onmouseover = function(){
+			gouwuche.style.overflow = null;
+			gouwuche.style.width = "123px";
+		}
+		gouwuche.onmouseout = function(){
+			gouwuche.style.overflow = "hidden";
+			gouwuche.style.width = "44px";
+		}
+	</script>
+</body>
+</html>
